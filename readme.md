@@ -51,8 +51,8 @@ Replace `<filename>` with the name of your `.bicep` file, `<resource group name>
 
 ### Deployment Using CI/CD Pipelines
 
-You can also use the provided `azure-pipeline.yaml` file to set up a CI/CD pipeline in GitHub Actions or Azure DevOps.
+You can also use the provided `azure-pipeline.yaml` file to set up a CI/CD pipeline in Azure DevOps.
 
-In GitHub Actions or Azure DevOps, create a new pipeline and point it to the `azure-pipeline.yaml` file in your repository. The pipeline will automatically handle the deployment whenever you push changes to your repository.
+In Azure DevOps, create a new pipeline and point it to the `azure-pipeline.yaml` file in your repository. The pipeline will automatically handle the deployment whenever you manually run it.
 
 Please note that some parameters are left empty in the deployment script for security reasons. You will need to provide the necessary information (like the administrator password for SQL server) during deployment.
