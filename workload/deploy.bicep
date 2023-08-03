@@ -26,11 +26,6 @@ module vnet '../modules/Microsoft.Network/virtualNetworks/deploy.bicep' = {
       {
         addressPrefix: '10.0.0.0/28'
         name: 'sqlSubnet'
-        serviceEndpoints: [
-          {
-            service: 'Microsoft.Sql'
-          }
-        ]
       }
     ]
   }
@@ -81,6 +76,7 @@ module servers '../modules/Microsoft.Sql/servers/deploy.bicep' = {
     name: 'testwesleyrabocase1'
     administratorLogin: 'sqlAdmin'
     administratorLoginPassword: '' //enter password and deploy, change password and save in kv
+    publicNetworkAccess: 'Disabled'
     privateEndpoints: [
       {
         service: 'sqlServer'
