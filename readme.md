@@ -1,6 +1,8 @@
 # Azure Deployment Script Documentation
 
-This document provides detailed explanation of an Azure deployment script that involves different Azure services, including resource groups, virtual networks, user-assigned identities, KeyVaults, SQL servers and Data Factories. 
+This document provides a detailed explanation of an Azure deployment script that involves different Azure services, including resource groups, virtual networks, user-assigned identities, KeyVaults, SQL servers, and Data Factories. This script makes use of the Common Azure Resource Modules Library (CARML), a repository hosted, managed, and developed by Microsoft. 
+
+CARML provides a library of mature and curated Bicep modules along with a Continuous Integration (CI) environment that's used for modules' validation and versioned publishing. However, it should be noted that CARML is still in beta and the modules used in this script might have been modified to meet specific deployment requirements.
 
 ---
 
@@ -37,11 +39,13 @@ The script also declares dependencies between resources to ensure they are deplo
 
 1. Copy the script into a file with a `.bicep` extension.
 
-2. Open Azure CLI.
+2. Make sure that the modules folder is copied over as well. 
 
-3. Navigate to the directory containing the `.bicep` file.
+3. Open Azure CLI.
 
-4. Run the command `az deployment sub create --template-file ./<filename>.bicep --parameters resourceGroupName=<resource group name> location=<location>`
+4. Navigate to the directory containing the `.bicep` file.
+
+5. Run the command `az deployment sub create --template-file ./<filename>.bicep --parameters resourceGroupName=<resource group name> location=<location>`
 
 Replace `<filename>` with the name of your `.bicep` file, `<resource group name>` with the name of your resource group and `<location>` with the desired Azure region (e.g., 'westus2').
 
