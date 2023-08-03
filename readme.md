@@ -49,4 +49,10 @@ The script also declares dependencies between resources to ensure they are deplo
 
 Replace `<filename>` with the name of your `.bicep` file, `<resource group name>` with the name of your resource group and `<location>` with the desired Azure region (e.g., 'westus2').
 
+### Deployment Using CI/CD Pipelines
+
+You can also use the provided `azure-pipeline.yaml` file to set up a CI/CD pipeline in GitHub Actions or Azure DevOps.
+
+In GitHub Actions or Azure DevOps, create a new pipeline and point it to the `azure-pipeline.yaml` file in your repository. The pipeline will automatically handle the deployment whenever you push changes to your repository.
+
 Please note that some parameters are left empty in the deployment script for security reasons. You will need to provide the necessary information (like the administrator password for SQL server) during deployment.
