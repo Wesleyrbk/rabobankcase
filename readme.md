@@ -25,7 +25,7 @@ The script uses several modules to deploy resources into Azure:
 
 3. **User-Assigned Identity (UAI)**: This module creates an Azure User-Assigned Managed Identity. The identity is named 'testcaseUAI'.
 
-4. **Key Vault (keyvault)**: This module deploys an Azure Key Vault into the resource group. The Key Vault named 'keyvaultWesleyRabo' has its access policy set to deny by default, but allows access from Azure services and a specific IP address '89.98.165.103'.
+4. **Key Vault (keyvault)**: This module deploys an Azure Key Vault into the resource group. The Key Vault named 'keyvaultWesleyRabo' has its access policy set to deny by default, but allows access from Azure services and a specific IP address (my home IP).
 
 5. **SQL Server (servers)**: This module deploys an Azure SQL Server named 'testwesleyrabocase1' with an empty password field. It also deploys a SQL Database named 'testdb'. The module uses private endpoint for accessing the SQL Server. The User Assigned Managed Identity 'testcaseUAI' is set as both the primary identity and user assigned identity for the SQL server.
 
